@@ -1,5 +1,5 @@
-const DailyForecast = () => {
-  return <div></div>;
+const DailyForecast = ({ city }) => {
+  return <div>napi elorejelzes</div>;
 };
 
 export default DailyForecast;
