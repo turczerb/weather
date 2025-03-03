@@ -5,7 +5,7 @@ import SearchBar from "../Search/SearchBar";
 import ThreeDaysForecast from "../ForecastWeather/ThreeDaysForecast";
 
 const HomeContainer = () => {
-  const [inputText, setInputText] = useState(""); // A keresett város neve
+  const [inputText, setInputText] = useState(""); // A keresett város nev't tarolo allapot
 
   const handleSearch = () => {
     //keresesi adatok kuldese, api call itt lehet

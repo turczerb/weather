@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 const SearchBar = ({ inputText, onInputChange, onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault(); // megakadalyozza az urlap bekuldeset, s ujratoltest.
-    onSubmit(); //kereses vegrehajtasa
+    onSubmit(); //Meghívja a szülő komponensben lévő keresés függvényt (pl. a keresés indítása)
   };
 
   const handleChange = (e) => {
-    onInputChange(e.target.value); //Az e.target.value az input mező új értéke, amit a setInputText függvény segítségével frissítünk
+    onInputChange(e.target.value); //Az e.target.value az input mező új értéke,amit szuloknek adunk at
     console.log(inputText);
   };
 
