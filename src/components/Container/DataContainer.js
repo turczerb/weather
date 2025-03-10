@@ -1,7 +1,6 @@
 const DataContainer = () => {
   return (
     <div>
-      here will be the
       <div>
         <p>varosnev</p>
         <p>hofok</p>
