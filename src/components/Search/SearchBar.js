@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const SearchBar = ({ inputText, onInputChange, onSubmit }) => {
   const handleSubmit = (e) => {
+    console.log(document.getElementById("city").value);
     e.preventDefault(); // megakadalyozza az urlap bekuldeset, s ujratoltest.
-    onSubmit(); //Meghívja a szülő komponensben lévő keresés függvényt (pl. a keresés indítása)
+    //onSubmit(); //Meghívja a szülő komponensben lévő keresés függvényt (pl. a keresés indítása)
+    onInputChange(document.getElementById("city").value);
   };
 
   const handleChange = (e) => {
@@ -15,10 +17,11 @@ const SearchBar = ({ inputText, onInputChange, onSubmit }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          id="city"
           type="text"
           placeholder="city name"
-          value={inputText}
-          onChange={handleChange}
+          //value={inputText}
+          //onChange={handleChange}
         ></input>
         <button type="submit">klikk</button>
       </form>

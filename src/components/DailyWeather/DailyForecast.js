@@ -10,12 +10,19 @@ const DailyForecast = ({ city }) => {
   );
 
   console.log("tartlom" + city);
+  console.log("data" + data);
 
   return (
     <div>
       napi elorejelzes
       <div>
-        <DataContainer />
+        <div>
+          {data ? (
+            <DataContainer cityname={data.location.name} weatherData={data} />
+          ) : (
+            <p>Adatok betöltése...</p>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -26,8 +26,12 @@ const UseWeather = (url) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        console.log("Kapott adat forec:", JSON.stringify(data, null, 2)); //null, osszes kulcs marad, 2:space
         setData(data);
         setLoading(false);
+      })
+      .catch((error) => {
+        console.error("error", error);
       });
   }, [url]);
 
